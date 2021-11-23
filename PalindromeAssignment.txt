@@ -1,0 +1,47 @@
+import Foundation
+
+
+//1- without recursion
+
+func isPalindromeWithRecursion(word: String) -> Bool {
+    if(word == String(word.reversed())){
+        return true
+    }
+    else{
+        return false
+    }
+}
+
+print("Please Enter a Word To Check:")
+var entry = readLine()!
+if(isPalindromeWithRecursion(word: entry)){
+    print("\(entry) is a Palindrome")
+}
+else{
+    print("\(entry) is not a Palindrome")
+}
+//-------------------------------------------------
+
+
+//2- with recursion
+
+func isPalindromeWithoutRecursion(word: String) {
+    if(word == String(word.reversed())){
+        print("\(entry) is a Palindrome")
+    }
+    else{
+        print("\(entry) is not a Palindrome")
+    }
+}
+
+print("Please Enter another Word To Check:")
+entry = readLine()!
+isPalindromeWithoutRecursion(word: entry)
+//-------------------------------------------------
+
+
+//3- least amount of code possible
+
+print("Please Enter another Word To Check:")
+entry = readLine()!
+print((entry == String(entry.reversed())) ? "\(entry) is a Palindrome" : "\(entry) is not a Palindrome")
