@@ -1,13 +1,23 @@
-import Foundation
+//Please Notic I'm using Command Line Tool
+//As The Assignment was pointed
+//I didn't use Playground
 
+import Foundation
 
 //1- without recursion
 
-func isPalindromeWithRecursion(word: String) -> Bool {
-    if(word == String(word.reversed())){
+func isPalindromeWithRecursion(word value: String) -> Bool
+{
+    guard value.count >= 2 else {
         return true
     }
-    else{
+
+    let end = value.index(value.endIndex, offsetBy: -1)
+
+    if value[value.startIndex] == value[end] {
+        let start = value.index(value.startIndex, offsetBy: 1)
+        return isPalindromeWithRecursion(word: String(value[start..<end]))
+    } else {
         return false
     }
 }
@@ -21,7 +31,6 @@ else{
     print("\(entry) is not a Palindrome")
 }
 //-------------------------------------------------
-
 
 //2- with recursion
 
@@ -39,9 +48,7 @@ entry = readLine()!
 isPalindromeWithoutRecursion(word: entry)
 //-------------------------------------------------
 
-
 //3- least amount of code possible
-
 print("Please Enter another Word To Check:")
 entry = readLine()!
 print((entry == String(entry.reversed())) ? "\(entry) is a Palindrome" : "\(entry) is not a Palindrome")
