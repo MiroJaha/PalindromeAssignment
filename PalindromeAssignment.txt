@@ -1,4 +1,4 @@
-//Please Notic I'm using Command Line Tool
+//Please Notice I'm using Command Line Tool
 //As The Assignment was pointed
 //I didn't use Playground
 
