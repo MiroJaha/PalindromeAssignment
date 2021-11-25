@@ -4,7 +4,7 @@
 
 import Foundation
 
-//1- without recursion
+//1- with recursion
 
 func isPalindromeWithRecursion(word value: String) -> Bool
 {
@@ -32,7 +32,7 @@ else{
 }
 //-------------------------------------------------
 
-//2- with recursion
+//2- without recursion
 
 func isPalindromeWithoutRecursion(word: String) {
     if(word == String(word.reversed())){
